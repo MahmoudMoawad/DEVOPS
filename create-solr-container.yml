@@ -1,0 +1,12 @@
+---
+- name: Create Solr Container
+  hosts: dockerhost
+  tasks:
+  - name:  solr container
+    docker_container:
+      name: solr_container
+      image: solr
+      state: started
+      ports: 
+      - "8983:8983"
+

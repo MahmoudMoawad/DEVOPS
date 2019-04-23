@@ -1,0 +1,8 @@
+---
+
+- name: Pull Solr Image
+  hosts: dockerhost
+  tasks:
+  - name: pull Solr image
+    docker_image:
+      name: solr
